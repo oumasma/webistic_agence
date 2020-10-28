@@ -9,7 +9,7 @@ const Navbar = ({ language, setLanguage }) => {
     const allLanguages = [
         { langCode: 'fr', langFlag: frenchFlag },
         { langCode: 'en', langFlag: britainFlag },
-      ];
+    ];
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,19 +24,19 @@ const Navbar = ({ language, setLanguage }) => {
                     <Link to="/Works" className="nav-item nav-link "><FormattedMessage id="Works" /></Link>
                 </ul>
                 <ul className="navbar-nav">
-        {allLanguages.map(({ langCode, langFlag }) => (
-          (langCode === language) ? null : (
-            <li className="nav-item" key={langCode}>
-              <img
-                className="nav-link"
-                src={langFlag}
-                onClick={() => setLanguage(langCode)}
-                alt={langCode}
-              />
-            </li>
-          )
-        ))}
-      </ul>
+                    {allLanguages.map(({ langCode, langFlag }) => (
+                        (langCode === language) ? null : (
+                            <li className="nav-item" key={langCode}>
+                                <img
+                                    className="nav-link"
+                                    src={langFlag}
+                                    onClick={() => setLanguage(langCode)}
+                                    alt={langCode}
+                                />
+                            </li>
+                        )
+                    ))}
+                </ul>
             </div>
         </nav>
     );
