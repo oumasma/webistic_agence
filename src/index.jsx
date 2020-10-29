@@ -37,7 +37,6 @@ const App = () => {
         <main>
             <IntlProvider locale={language} messages={messages[language]}>
                 <Router>
-                    <div>
                         <Navbar setLanguage={setLanguage}
                             language={language}
                         />
@@ -53,7 +52,6 @@ const App = () => {
                                 <Home />
                             </Route>
                         </Switch>
-                    </div>
                 </Router>
             </IntlProvider>
         </main>

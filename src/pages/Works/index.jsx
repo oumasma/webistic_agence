@@ -6,29 +6,42 @@ import {
     Link,
 } from "react-router-dom";
 import { FormattedMessage } from 'react-intl';
-import './index.scss'; 
+import './index.scss';
 
 const Works = () =>
-    <div className="container">
-        <h1><FormattedMessage id="WorksTitle" /></h1>
-        <p><FormattedMessage id="WorksDescription" /></p>
+    <div>
+        <section className="jumbotron text-center">
+            <div className="container">
+                <h1><FormattedMessage id="WorksTitle" /></h1>
+                <p className="lead text-muted"><FormattedMessage id="WorksDescription" /></p>
+            </div>
+        </section>
         <div>
-        <div>
+            <div>
                 <div className="row">
                     <div className="col-md-4">
-                    <div className="card">
-                        <Link to="/works/platon" className="text-center"><FormattedMessage id="platon.title" /></Link>
-                    </div>
-                    </div>
-                    <div className="col-md-4">
-                    <div className="card">
-                        <Link to="/works/sedal" className="text-center"><FormattedMessage id="sedal.title" /></Link>
-                    </div>
+                        <div className="card mb-4 shadow-sm">
+                            <div class="card-body text-center">
+                            <FormattedMessage id="platon.title" />
+                            </div>
+                            <Link to="/works/platon" className="text-center">voir plus</Link>
+                        </div>
                     </div>
                     <div className="col-md-4">
-                    <div className="card">
-                        <Link to="/works/solane" className="text-center"><FormattedMessage id="solane.title" /></Link>
+                        <div className="card mb-4 shadow-sm">
+                            <div class="card-body text-center">
+                            <FormattedMessage id="sedal.title" />
+                            </div>
+                            <Link to="/works/sedal" className="text-center">voir plus</Link>
+                        </div>
                     </div>
+                    <div className="col-md-4">
+                        <div className="card mb-4 shadow-sm">
+                            <div class="card-body text-center">
+                            <FormattedMessage id="solane.title" />
+                            </div>
+                            <Link to="/works/solane" className="text-center">voir plus</Link>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -38,8 +51,6 @@ const Works = () =>
                 </Route>
             </Switch>
         </div>
-
-        
-
     </div>
+
 export default Works
