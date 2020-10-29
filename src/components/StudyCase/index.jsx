@@ -1,6 +1,6 @@
 import React from 'react';
-import studycases from 'data/studycases'
-import { useParams } from 'react-router-dom'
+import studycases from 'data/studycases';
+import { useParams } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 
 const StudyCase = () => {
