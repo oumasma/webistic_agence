@@ -3,9 +3,7 @@ import error from './error.json';
 import home from './home.json';
 import about from './about.json';
 import works from './works.json';
-import platon from './platon.json';
-import solane from './solane.json';
-import sedal from './sedal.json';
+import studycases from './studycases.json';
 import navbar from './navbar.json';
 
 
@@ -14,9 +12,7 @@ const fr = {
     ...home,
     ...about, 
     ...works,
-    ...platon,
-    ...solane,
-    ...sedal,
+    ...studycases,
     ...navbar  //On concatène tous nos objets JSON en un seul
 };
 

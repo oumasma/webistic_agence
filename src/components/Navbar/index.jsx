@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './index.scss';
 import { Link } from "react-router-dom";
 import { FormattedMessage } from 'react-intl';
-import britainFlag from '../../assets/images/britainFlag.png';
-import frenchFlag from '../../assets/images/frenchFlag.png';
+import britainFlag from 'assets/images/britainFlag.png';
+import frenchFlag from 'assets/images/frenchFlag.png';
 
 const Navbar = ({ language, setLanguage }) => {
     const allLanguages = [
@@ -19,9 +19,9 @@ const Navbar = ({ language, setLanguage }) => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul className="navbar-nav mr-auto">
-                    <Link to="/" className="nav-item nav-link active"><FormattedMessage id="Home" /></Link>
-                    <Link to="/About" className="nav-item nav-link "><FormattedMessage id="About" /></Link>
-                    <Link to="/Works" className="nav-item nav-link "><FormattedMessage id="Works" /></Link>
+                    <Link to="/" className="nav-item nav-link active"><FormattedMessage id="home" /></Link>
+                    <Link to="/about" className="nav-item nav-link "><FormattedMessage id="about" /></Link>
+                    <Link to="/works" className="nav-item nav-link "><FormattedMessage id="works" /></Link>
                 </ul>
                 <ul className="navbar-nav">
                     {allLanguages.map(({ langCode, langFlag }) => (
