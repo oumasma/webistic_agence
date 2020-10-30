@@ -23,12 +23,12 @@ const messages = {
 
 
 const App = () => {
-    const defaultLang = JSON.parse(localStorage.getItem(Config.STORAGE_KEY) || 'fr');
+    const defaultLang = localStorage.getItem(Config.STORAGE_KEY) || 'fr';
     const [language, setLanguage] = React.useState(defaultLang);
     //La langue par défaut de notre app (doit correspondre à un des index de la variables messages ci dessus).
 
     React.useEffect(() => {
-        localStorage.setItem(Config.STORAGE_KEY, JSON.stringify(language));
+        localStorage.setItem(Config.STORAGE_KEY, language);
     }, [language]);
 
 
